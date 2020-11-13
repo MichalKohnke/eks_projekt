@@ -135,3 +135,9 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+	
+	MIDDLEWARE = [
+  # 'django.middleware.security.SecurityMiddleware',
+  'whitenoise.middleware.WhiteNoiseMiddleware',
+  # ...
+]
