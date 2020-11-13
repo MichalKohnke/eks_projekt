@@ -1,0 +1,3 @@
+#!c:\users\kokiv\documents\djangogirls\myenv\scripts\python.exe -u
+from xonsh.main import main
+main()
