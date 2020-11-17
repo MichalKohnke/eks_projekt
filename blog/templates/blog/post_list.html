@@ -1,18 +1,27 @@
 <html>
     <head>
         <title>Michał Kohnke blog</title>
+		<link rel="stylesheet" href="../../../staticfiles/css/blog.css">
     </head>
     <body>
-        <div>
-            <h1><a href="">Michał Kohnke Blog</a></h1>
-        </div>
-
-        {% for post in posts %}
-		<div>
-			<p>published: {{ post.published_date }}</p>
-			<h1><a href="">{{ post.title }}</a></h1>
-			<p>{{ post.text|linebreaks }}</p>
+        <div class="page-header">
+			<h1><a href="/">Michał Kohnke Blog</a></h1>
 		</div>
-		{% endfor %}
+
+        <div class="content container">
+			<div class="row">
+				<div class="col-md-8">
+					{% for post in posts %}
+						<div class="post">
+							<div class="date">
+								{{ post.published_date }}
+							</div>
+							<h1><a href="">{{ post.title }}</a></h1>
+							<p>{{ post.text|linebreaks }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
     </body>
 </html>
